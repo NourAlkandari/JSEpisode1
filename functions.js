@@ -22,14 +22,8 @@ function greet(name) {
  */
 function isOdd(n) {
   // Your code here
-  let reminder = n % 2;
-  if (reminder == 0) {
-    return false;
-  } else {
-    return true;
-  }
+  return n % 2 !== 0;
 }
-
 /**
  * oddsSmallerThan(n):
  * - receives a number n
@@ -43,14 +37,19 @@ function isOdd(n) {
  */
 function oddsSmallerThan(n) {
   // Your code here
-  let reminder = n % 2;
-  if (reminder !== 0) {
+  if (isOdd(n)) {
     n--;
-    return n / 2;
-  } else {
-    return n / 2;
   }
+  return n / 2;
 }
+//   let reminder = n % 2;
+//   if (reminder !== 0) {
+//     n--;
+//     return n / 2;
+//   } else {
+//     return n / 2;
+//   }
+// }
 
 /**
  * squareOrDouble(n):
@@ -64,13 +63,20 @@ function oddsSmallerThan(n) {
  */
 function squareOrDouble(n) {
   // Your code here
-  let reminder = n % 2;
-  if (reminder == 0) {
-    return n * 2;
+  if (isOdd(n)) {
+    return n * n;
   } else {
-    return Math.pow(n, 2);
+    return n * 2;
   }
 }
+
+//   let reminder = n % 2;
+//   if (reminder == 0) {
+//     return n * 2;
+//   } else {
+//     return Math.pow(n, 2);
+//   }
+// }
 
 /**
  * ageFromCivilID(civilID):
@@ -107,9 +113,6 @@ function ageFromCivilID(civilID) {
  */
 function canVoteInKuwait(civilID, isKuwaiti, isRoyal) {
   // Your code here
-  let civilID = "string";
-  let isKuwaiti = true;
-  let isRoyal = false;
 }
 
 module.exports = {
