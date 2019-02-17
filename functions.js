@@ -6,6 +6,13 @@
  */
 function greet(name) {
   // Your code here
+
+  if (name) {
+    // if name is true
+    console.log(`Hello ${name}`);
+  } else {
+    console.log("Hello");
+  }
 }
 
 /**
@@ -15,6 +22,12 @@ function greet(name) {
  */
 function isOdd(n) {
   // Your code here
+  let reminder = n % 2;
+  if (reminder == 0) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
 /**
@@ -30,6 +43,13 @@ function isOdd(n) {
  */
 function oddsSmallerThan(n) {
   // Your code here
+  let reminder = n % 2;
+  if (reminder !== 0) {
+    n--;
+    return n / 2;
+  } else {
+    return n / 2;
+  }
 }
 
 /**
@@ -44,6 +64,12 @@ function oddsSmallerThan(n) {
  */
 function squareOrDouble(n) {
   // Your code here
+  let reminder = n % 2;
+  if (reminder == 0) {
+    return n * 2;
+  } else {
+    return Math.pow(n, 2);
+  }
 }
 
 /**
@@ -81,6 +107,9 @@ function ageFromCivilID(civilID) {
  */
 function canVoteInKuwait(civilID, isKuwaiti, isRoyal) {
   // Your code here
+  let civilID = "string";
+  let isKuwaiti = true;
+  let isRoyal = false;
 }
 
 module.exports = {
